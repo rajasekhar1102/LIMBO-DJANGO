@@ -135,7 +135,7 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
         print(settings.BASE_DIR)
         print("hellooooo")
-        print(os.listdir(settings.BASE_DIR+'/media')))
+        print(os.listdir(settings.BASE_DIR+'/media'))
         print(os.listdir(settings.BASE_DIR+'/media/store/images'))
         print([f for f in Path(__file__).resolve(
         ).parent.parent.iterdir() if f.is_file()])
