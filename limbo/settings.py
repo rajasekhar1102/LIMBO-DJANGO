@@ -172,12 +172,13 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
     "TOKEN_OBTAIN_SERIALIZER": "movie.serializers.MyTokenObtainPairSerializer",
 }
-CORS_ALLOWED_ORIGINS = [
+# CORS_ALLOWED_ORIGINS = [
 
 
-    "http://localhost:3000",
-    "http://192.168.55.106:3000",
-]
+#     "http://localhost:3000",
+#     "http://192.168.55.106:3000",
+# ]
+CORS_ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'core.User'
 
