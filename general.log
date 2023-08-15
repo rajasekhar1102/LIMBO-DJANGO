@@ -70,3 +70,4 @@
 2023-08-15 11:48:59,567 (WARNING) - django.request - Not Found: /static/admin/js/nav_sidebar.js
 2023-08-15 11:48:59,611 (WARNING) - django.request - Not Found: /static/admin/js/filters.js
 2023-08-15 11:49:04,842 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
+2023-08-15 14:52:30,406 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
