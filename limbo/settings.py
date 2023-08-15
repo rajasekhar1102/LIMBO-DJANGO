@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Application definition
 
 
-DEBUG = False
+DEBUG = True
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
