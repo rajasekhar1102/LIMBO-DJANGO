@@ -153,7 +153,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Default primary key field type
@@ -182,30 +182,30 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'core.User'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler'
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'general.log',
-            'formatter': 'verbose',
-        }
-    },
-    'loggers': {
-        '': {
-            'handlers': ['console', 'file'],
-            'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO')
-        }
-    },
-    'formatters': {
-        'verbose': {
-            'format': '{asctime} ({levelname}) - {name} - {message}',
-            'style': '{'
-        }
-    }
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler'
+#         },
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'general.log',
+#             'formatter': 'verbose',
+#         }
+#     },
+#     'loggers': {
+#         '': {
+#             'handlers': ['console', 'file'],
+#             'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO')
+#         }
+#     },
+#     'formatters': {
+#         'verbose': {
+#             'format': '{asctime} ({levelname}) - {name} - {message}',
+#             'style': '{'
+#         }
+#     }
 
-}
+# }
