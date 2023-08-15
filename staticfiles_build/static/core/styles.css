@@ -1,0 +1,16 @@
+h1{
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.name{
+    background-color:rgba(237, 19, 19,0.2);
+    height: 100px;
+    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+body{
+    background-image: url('peakpx.jpg');
+}
