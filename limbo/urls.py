@@ -28,7 +28,5 @@ urlpatterns = [
     path('auth/', include('djoser.urls.jwt')),
     path('', TemplateView.as_view(template_name='core/index.html')),
 ]
-
-
 urlpatterns += static(settings.STATIC_URL,
                       document_root=settings.STATIC_ROOT)
