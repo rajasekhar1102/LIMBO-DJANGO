@@ -1,0 +1,72 @@
+2023-08-14 22:59:46,493 (INFO) - waitress - Serving on http://0.0.0.0:8000
+2023-08-14 23:15:20,973 (INFO) - waitress - Serving on http://0.0.0.0:8000
+2023-08-14 23:16:57,963 (INFO) - waitress - Serving on http://0.0.0.0:80
+2023-08-14 23:26:15,635 (INFO) - waitress - Serving on http://0.0.0.0:8000
+2023-08-14 23:30:26,917 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:30:30,192 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-14 23:31:48,372 (INFO) - django.utils.autoreload - C:\Users\rajas\Desktop\djagno projects\limbo\core\admin.py changed, reloading.
+2023-08-14 23:31:50,092 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:35:18,783 (INFO) - django.utils.autoreload - C:\Users\rajas\Desktop\djagno projects\limbo\movie\admin.py changed, reloading.
+2023-08-14 23:35:20,146 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:37:05,244 (INFO) - django.utils.autoreload - C:\Users\rajas\Desktop\djagno projects\limbo\movie\models.py changed, reloading.
+2023-08-14 23:37:06,205 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:37:18,272 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-14 23:37:18,620 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-14 23:38:07,970 (INFO) - django.utils.autoreload - C:\Users\rajas\Desktop\djagno projects\limbo\movie\admin.py changed, reloading.
+2023-08-14 23:38:08,852 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:38:44,646 (INFO) - django.utils.autoreload - C:\Users\rajas\Desktop\djagno projects\limbo\movie\admin.py changed, reloading.
+2023-08-14 23:38:45,901 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:38:56,046 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:46:26,426 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-14 23:55:12,266 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-15 01:31:27,576 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-15 01:34:59,360 (INFO) - waitress - Serving on http://0.0.0.0:8000
+2023-08-15 09:48:54,170 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-15 09:49:45,737 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-15 09:50:01,600 (WARNING) - django.request - Not Found: /media/store/images/Z_Cw0iT__400x400_SqSVa60.jpg
+2023-08-15 09:50:30,205 (WARNING) - django.request - Unauthorized: /store/media/Z_Cw0iT__400x400_SqSVa60.jpg/
+2023-08-15 11:46:34,085 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-08-15 11:46:43,360 (WARNING) - django.request - Not Found: /static/core/styles.css
+2023-08-15 11:47:52,636 (WARNING) - django.request - Not Found: /static/admin/css/dark_mode.css
+2023-08-15 11:47:52,638 (WARNING) - django.request - Not Found: /static/admin/css/base.css
+2023-08-15 11:47:52,643 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
+2023-08-15 11:47:52,646 (WARNING) - django.request - Not Found: /static/admin/css/nav_sidebar.css
+2023-08-15 11:47:52,650 (WARNING) - django.request - Not Found: /static/admin/css/login.css
+2023-08-15 11:47:52,652 (WARNING) - django.request - Not Found: /static/admin/js/nav_sidebar.js
+2023-08-15 11:47:52,655 (WARNING) - django.request - Not Found: /static/admin/js/theme.js
+2023-08-15 11:47:53,198 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-15 11:47:53,438 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-15 11:48:14,149 (WARNING) - django.request - Not Found: /static/admin/css/base.css
+2023-08-15 11:48:14,152 (WARNING) - django.request - Not Found: /static/admin/css/dark_mode.css
+2023-08-15 11:48:14,152 (WARNING) - django.request - Not Found: /static/admin/css/nav_sidebar.css
+2023-08-15 11:48:14,156 (WARNING) - django.request - Not Found: /static/admin/css/login.css
+2023-08-15 11:48:14,159 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
+2023-08-15 11:48:14,163 (WARNING) - django.request - Not Found: /static/admin/js/theme.js
+2023-08-15 11:48:14,168 (WARNING) - django.request - Not Found: /static/admin/js/nav_sidebar.js
+2023-08-15 11:48:14,502 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-15 11:48:14,739 (WARNING) - django.request - Not Found: /favicon.ico
+2023-08-15 11:48:41,290 (WARNING) - django.request - Not Found: /static/admin/css/base.css
+2023-08-15 11:48:41,292 (WARNING) - django.request - Not Found: /static/admin/css/dark_mode.css
+2023-08-15 11:48:41,298 (WARNING) - django.request - Not Found: /static/admin/css/nav_sidebar.css
+2023-08-15 11:48:41,301 (WARNING) - django.request - Not Found: /static/admin/js/nav_sidebar.js
+2023-08-15 11:48:41,301 (WARNING) - django.request - Not Found: /static/admin/css/dashboard.css
+2023-08-15 11:48:41,308 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
+2023-08-15 11:48:41,312 (WARNING) - django.request - Not Found: /static/admin/js/theme.js
+2023-08-15 11:48:59,479 (WARNING) - django.request - Not Found: /static/admin/css/base.css
+2023-08-15 11:48:59,486 (WARNING) - django.request - Not Found: /static/admin/css/dark_mode.css
+2023-08-15 11:48:59,491 (WARNING) - django.request - Not Found: /static/admin/css/nav_sidebar.css
+2023-08-15 11:48:59,496 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
+2023-08-15 11:48:59,496 (WARNING) - django.request - Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-08-15 11:48:59,503 (WARNING) - django.request - Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-08-15 11:48:59,511 (WARNING) - django.request - Not Found: /static/admin/css/changelists.css
+2023-08-15 11:48:59,522 (WARNING) - django.request - Not Found: /static/admin/js/jquery.init.js
+2023-08-15 11:48:59,525 (WARNING) - django.request - Not Found: /static/admin/js/core.js
+2023-08-15 11:48:59,526 (WARNING) - django.request - Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-08-15 11:48:59,526 (WARNING) - django.request - Not Found: /static/admin/js/prepopulate.js
+2023-08-15 11:48:59,531 (WARNING) - django.request - Not Found: /static/admin/js/actions.js
+2023-08-15 11:48:59,538 (WARNING) - django.request - Not Found: /static/admin/js/urlify.js
+2023-08-15 11:48:59,545 (WARNING) - django.request - Not Found: /static/admin/img/search.svg
+2023-08-15 11:48:59,558 (WARNING) - django.request - Not Found: /static/admin/js/theme.js
+2023-08-15 11:48:59,567 (WARNING) - django.request - Not Found: /static/admin/js/nav_sidebar.js
+2023-08-15 11:48:59,611 (WARNING) - django.request - Not Found: /static/admin/js/filters.js
+2023-08-15 11:49:04,842 (WARNING) - django.request - Not Found: /static/admin/css/responsive.css
