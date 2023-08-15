@@ -10,9 +10,9 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.mixins import RetrieveModelMixin
 import os
-from django.http import FileResponse
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 import base64
+from pathlib import Path
 
 
 class GenreViewSet(ModelViewSet):
@@ -128,6 +128,8 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         return Profile.objects.filter(user_id=self.request.user.id)
 
     def retrieve(self, request, *args, **kwargs):
+        media_root = os.path.join(
+            Path(__file__).resolve().parent.parent, 'media')
         filepath = 'media/store/images/'+self.kwargs['pk']
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
