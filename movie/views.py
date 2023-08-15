@@ -133,8 +133,10 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         filepath = 'media/store/images/'+self.kwargs['pk']
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
-
-        binary_fc = open(os.path.join(settings.BASE_DIR,
+        print(settings.BASE_DIR)
+        print([f for f in Path(__file__).resolve(
+        ).parent.parent.iterdir() if f.is_file()])
+        binary_fc = open(os.path.join(media_root,
                          filepath), 'rb').read()
 
         base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
