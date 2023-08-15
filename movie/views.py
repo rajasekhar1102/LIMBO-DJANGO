@@ -134,6 +134,10 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
         print(settings.BASE_DIR)
+        print(os.listdir(Path(Path(__file__).resolve(
+        ).parent.parent+'/media')))
+        print(os.listdir(Path(Path(__file__).resolve(
+        ).parent.parent+'/media/store/images')))
         print([f for f in Path(__file__).resolve(
         ).parent.parent.iterdir() if f.is_file()])
         binary_fc = open(os.path.join(media_root,
