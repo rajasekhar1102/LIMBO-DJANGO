@@ -128,7 +128,7 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         return Profile.objects.filter(user_id=self.request.user.id)
 
     def retrieve(self, request, *args, **kwargs):
-        filepath = 'media\\store\\images\\'+self.kwargs['pk']
+        filepath = 'media/store/images/'+self.kwargs['pk']
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
 

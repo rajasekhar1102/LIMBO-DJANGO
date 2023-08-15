@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Application definition
 
 
-DEBUG = os.environ.get('DEBUG', 'FALSE').lower() == 'true'
+DEBUG = True
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # Database
@@ -66,7 +66,7 @@ database_url = os.environ.get('DATABASE_URL')
 DATABASES['default'] = dj_database_url.parse(database_url)
 
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 
 INSTALLED_APPS = [
