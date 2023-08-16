@@ -133,15 +133,18 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         filepath = 'media/store/images/'+self.kwargs['pk']
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
-        print(settings.BASE_DIR)
-        print("hellooooo")
-        print(os.listdir(os.path.join(settings.BASE_DIR, 'media')))
-        print(os.listdir(os.path.join(settings.BASE_DIR, 'media/store/images')))
-        print([f for f in Path(__file__).resolve(
-        ).parent.parent.iterdir() if f.is_file()])
-        binary_fc = open(os.path.join(media_root,
-                         filepath), 'rb').read()
+        # print(settings.BASE_DIR)
 
+        # print(os.listdir(os.path.join(settings.BASE_DIR, 'media')))
+        # print(os.listdir(os.path.join(settings.BASE_DIR, 'media/store/images')))
+        # print([f for f in Path(__file__).resolve(
+        # ).parent.parent.iterdir() if f.is_file()])
+        try:
+
+            binary_fc = open(os.path.join(media_root,
+                                          filepath), 'rb').read()
+        except FileNotFoundError:
+            return Response({'details': "project doesn't support hosting media files"})
         base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
 
         ext = self.kwargs['pk'].split('.')[-1]

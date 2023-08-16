@@ -51,7 +51,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        # 'DATABASE_URL':'postgresql://postgres:7TGi5a8EOvC1n5v9pXcb@containers-us-west-132.railway.app:6684/railway',
+
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': '7TGi5a8EOvC1n5v9pXcb',
