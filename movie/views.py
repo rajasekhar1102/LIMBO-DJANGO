@@ -12,7 +12,8 @@ from rest_framework.mixins import RetrieveModelMixin
 import os
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 import base64
-from pathlib import Path
+from storages.backends.s3boto3 import S3Boto3StorageFile
+from django.core.files.storage import default_storage
 
 
 class GenreViewSet(ModelViewSet):
@@ -128,26 +129,16 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         return Profile.objects.filter(user_id=self.request.user.id)
 
     def retrieve(self, request, *args, **kwargs):
-        media_root = os.path.join(
-            Path(__file__).resolve().parent.parent, 'media')
-        filepath = 'media/store/images/'+self.kwargs['pk']
+
         profile = get_object_or_404(
             self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
-        # print(settings.BASE_DIR)
 
-        # print(os.listdir(os.path.join(settings.BASE_DIR, 'media')))
-        # print(os.listdir(os.path.join(settings.BASE_DIR, 'media/store/images')))
-        # print([f for f in Path(__file__).resolve(
-        # ).parent.parent.iterdir() if f.is_file()])
-        try:
-
-            binary_fc = open(os.path.join(media_root,
-                                          filepath), 'rb').read()
-        except FileNotFoundError:
-            return Response({'details': "project doesn't support hosting media files"})
+        file = default_storage.open(profile.picture.name, 'rb')
+        file_url = default_storage.url(profile.picture.name)
+        binary_fc = file.read()
         base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
 
         ext = self.kwargs['pk'].split('.')[-1]
         dataurl = f'data:image/{ext};base64,{base64_utf8_str}'
 
-        return Response({'dataurl': dataurl})
+        return Response({'dataurl': dataurl, 'url': file_url})

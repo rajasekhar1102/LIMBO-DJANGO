@@ -13,41 +13,16 @@ import os
 from pathlib import Path
 from datetime import timedelta
 import dj_database_url
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-
-# Application definition
-
-
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'movies',
-#         'PASSWORD': '12345',
-#         'USER': 'root',
-#     }
-# }
-
+database_url = os.environ.get('DATABASE_URL')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -62,12 +37,49 @@ DATABASES = {
     }
 
 }
-# postgres://limbo_user:yEyKvKL0U91lDRf2ZIiQ3t1KYg4Pg2hL@dpg-cjdmtagq339s73cd5fs0-a/limbo
-database_url = os.environ.get('DATABASE_URL')
 DATABASES['default'] = dj_database_url.parse(database_url)
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# DEBUG = True
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'movies',
+#         'PASSWORD': '12345',
+#         'USER': 'root',
+#     }
+# }
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+
+# SECRET_KEY = 'django-insecure-_wd=^lko-cv8$f+1m%a$8xuw+$7_58vuifx9mn*^)5m*!3ew$9'
+
+
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
+# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+# AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+# AWS_S3_REGION_NAME = env('AWS_S3_REGION_NAME')
+# AWS_S3_SIGNATURE_NAME = 's3v4',
+# AWS_S3_FILE_OVERWRITE = True
+# AWS_DEFAULT_ACL = None
+# AWS_S3_VERITY = True
 
 
 INSTALLED_APPS = [
@@ -156,7 +168,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 
 # Default primary key field type

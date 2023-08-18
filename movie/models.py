@@ -1,8 +1,10 @@
+from typing import Iterable, Optional
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
+from django.core.files.storage import default_storage
 # Create your models here.
 
 User = get_user_model()
@@ -50,3 +52,13 @@ class Profile(models.Model):
             return format_html('<img  src="{}"  class="profile"/>'.format(self.picture.url))
         else:
             return ""
+
+    def save(self, *args, **kwargs) -> None:
+
+        if not self.pk:
+            obj = Profile.objects.get(pk=self.pk)
+            print(obj.picture)
+            print(self.picture)
+            if self.picture and obj.picture and obj.picture.name != ('store/images/'+self.picture.name):
+                obj.picture.delete(save=False)
+        return super(Profile, self).save(*args, **kwargs)
