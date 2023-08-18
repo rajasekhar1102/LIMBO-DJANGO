@@ -57,8 +57,6 @@ class Profile(models.Model):
 
         if not self.pk:
             obj = Profile.objects.get(pk=self.pk)
-            print(obj.picture)
-            print(self.picture)
             if self.picture and obj.picture and obj.picture.name != ('store/images/'+self.picture.name):
                 obj.picture.delete(save=False)
         return super(Profile, self).save(*args, **kwargs)

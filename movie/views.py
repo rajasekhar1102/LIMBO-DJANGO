@@ -125,7 +125,6 @@ class ProfilePictureViewSet(RetrieveModelMixin, DestroyModelMixin, GenericViewSe
     lookup_value_regex = '[a-zA-Z0-9_-]+\.(?:png|jpg|jpeg|gif|svg)'
 
     def get_queryset(self):
-        print(self.kwargs['pk'])
         return Profile.objects.filter(user_id=self.request.user.id)
 
     def retrieve(self, request, *args, **kwargs):

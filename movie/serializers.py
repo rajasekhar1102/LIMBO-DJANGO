@@ -8,7 +8,6 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-        print("hi fjkfjdkljfkdsjkfjdkjfkdjfkdjkfjdkjfjkdjfkfjkfjkdsjfkj")
         token['username'] = user.username
         token['isAdmin'] = user.is_staff
         return token
