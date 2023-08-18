@@ -8,7 +8,7 @@ from rest_framework import permissions
 from rest_framework import status
 from rest_framework.generics import get_object_or_404
 from rest_framework.viewsets import GenericViewSet
-from rest_framework.mixins import RetrieveModelMixin
+from rest_framework.mixins import RetrieveModelMixin, DestroyModelMixin
 import os
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 import base64
@@ -142,3 +142,12 @@ class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
         dataurl = f'data:image/{ext};base64,{base64_utf8_str}'
 
         return Response({'dataurl': dataurl, 'url': file_url})
+
+    def destroy(self, request, *args, **kwargs):
+        profile = get_object_or_404(
+            self.get_queryset(), picture='store/images/'+self.kwargs['pk'])
+        if profile.picture:
+            profile.picture.delete(save=False)
+            profile.picture = ""
+        profile.save()
+        return Response({'dataurl': ""})
