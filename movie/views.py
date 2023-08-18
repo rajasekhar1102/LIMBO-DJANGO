@@ -118,9 +118,9 @@ class ProfileViewSet(ModelViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
 
-class ProfilePictureViewSet(RetrieveModelMixin, GenericViewSet):
+class ProfilePictureViewSet(RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
     permission_classes = [IsAuthenticated]
-    http_method_names = ['get',]
+    http_method_names = ['get', 'delete']
 
     lookup_value_regex = '[a-zA-Z0-9_-]+\.(?:png|jpg|jpeg|gif|svg)'
 
